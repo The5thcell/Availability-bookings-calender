@@ -1,0 +1,74 @@
+{
+  "name": "reactjs-availability-calendar",
+  "version": "1.1.7",
+  "description": "React Availability Calendar",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "test": "jest --config jestconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint",
+    "storybook": "start-storybook -p 9001"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "calendar",
+    "availability calendar",
+    "bookings calendar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simpletut/reactjs-availability-calendar"
+  },
+  "author": "Ashley Bibizadeh (simpletut)",
+  "license": "MIT",
+  "dependencies": {
+    "dayjs": "^1.11.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@testing-library/react": "^13.3.0",
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/jest": "^28.1.8",
+    "@types/react": "^18.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^28.0.8",
+    "jest-canvas-mock": "^2.4.0",
+    "jest-environment-jsdom": "^29.0.1",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-jest": "^28.0.8",
+    "typescript": "^4.8.2"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ]
+}
